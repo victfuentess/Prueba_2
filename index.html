@@ -1,19 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
+    <meta charset="UTF-8">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
 
     <title>SPORT STATISTICS</title>
   </head>
-<body>
+  <body>
     <h1 class="text-center text-uppercase">Sport Statistic</h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-light container">
         <div class="container-fluid">
@@ -32,7 +33,7 @@
             </div>
         </div>
     </nav>
-
+    <br>
     <h2 class="text-center">Deportes</h2>
     <p class="text-center">Pagina dedicada a los deportes</p>
     <br />
@@ -50,10 +51,10 @@
                 <img src="img/futbol.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="img/motocross.jpg" class="d-block w-100" alt="...">
+                <img src="img/Motocross.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="img/mma.jpg" class="d-block w-100" alt="...">
+                <img src="img/MMA.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -67,7 +68,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <br />
+    <br>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4" id="cards">
             <div class="col">
@@ -92,9 +93,9 @@
                             las
                             irregularidades del terreno, con curvas cerradas, montículos, baches y cambios de rasante, y
                             sobre una superficie de tierra</p>
-
+    
                     </div>
-
+    
                 </div>
             </div>
             <div class="col">
@@ -107,27 +108,28 @@
                             definitiva, incluyen movimientos y acciones de boxeo, karate, taekwondo, kickboxing, judo y
                             lucha libre</p>
                     </div>
-
+    
                 </div>
             </div>
         </div>
     </div>
-    <br>/
-    <div class="container" id="formu">
+    <br>
+
+    <div class="container">
         <div class="row">
             <form action="" id="formulario">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required>
+                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="ejemplo@ejemplo.cl"
-                        required>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="ejemplo@ejemplo.cl">
                 </div>
                 <div class="form-group">
-                    <label for="rut">Rut</label>
-                    <input type="rut" name="rut" id="rut" class="form-control" placeholder="Ingrese Rut" required>
+                    <label for="rut">Ingrese su rut</label>
+                    <input type="text" name="rut" id="rut" class="form-group" oninput="checkRut(this)" placeholder="Ingrese su rut sin puntos">
+                    
                 </div>
                 <div class="form-group">
                     <label for="pass1">Password</label>
@@ -142,7 +144,6 @@
                     <textarea class="form-control" id="comentarios" rows="3"
                         placeholder="Ingrese sus comentarios"></textarea>
                 </div>
-
                 <input type="submit" value="Enviar" class="btn btn-primary" id="enviar">
                 <div class="alert alert-danger" id="error"></div>
             </form>
@@ -150,22 +151,17 @@
     </div>
 
 
-
-
-
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="validar.js"></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function(){
             $("#error").hide();
-            $("#formulario").submit(function () {
+            $("#formulario").submit(function(){
                 var mensaje = "";
                 if ($("#nombre").val().trim().length == 0) {
                     mensaje = "El nombre esta en blanco"
@@ -183,15 +179,24 @@
                 if($("#comentarios").val().trim().length == 0) {
                     mensaje = "Los comentarios estan vacios"
                 }
-                if (mensaje != "") {
+                if($("#rut").val().trim().length == 0){
+                    mensaje = "el rut esta en blanco"
+                }
+                
+                if($("#pass1").val() != $("#pass2").val()){
+                    mensaje = "Contraseñas no coinciden"
+                }
+
+                if(mensaje != "") {
                     $("#error").html(mensaje);
                     $("#error").show();
                     event.preventDefault();
                 }
-
             });
         });
-    </script>
-</body>
 
+    </script>
+
+
+  </body>
 </html>
