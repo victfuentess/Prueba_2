@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+
+    <title>SPORT STATISTICS</title>
+  </head>
+<body>
+    <h1 class="text-center text-uppercase">Sport Statistic</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sport Statistic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="#">Futbol</a>
+                    <a class="nav-link" href="#">Motocross</a>
+                    <a class="nav-link" href="#">MMA</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h2 class="text-center">Deportes</h2>
+    <p class="text-center">Pagina dedicada a los deportes</p>
+    <br />
+    <div id="carouselExampleIndicators" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/futbol.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/motocross.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/mma.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br />
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="cards">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Futbol</h5>
+                        <p class="card-text">Según los propios adeptos, el fútbol es el deporte más bello, complejo y
+                            atrapante
+                            de todos.</p>
+                        <p class="card-text">El Fútbol, posee belleza de movimientos y sutilezas, pero también acciones
+                            violentas y error humano.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Motocross</h5>
+                        <p class="card-text">Modalidad de motociclismo que se realiza en pistas que no estan asfaltadas,
+                            en
+                            donde se combina la velocidad con la destreza necesaria para controlar la motocicleta ante
+                            las
+                            irregularidades del terreno, con curvas cerradas, montículos, baches y cambios de rasante, y
+                            sobre una superficie de tierra</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">MMA (artes marciales mixtas)</h5>
+                        <p class="card-text">MMA es una sigla que tiene diversos usos. Uno de los más habituales aparece
+                            en
+                            el terreno de los deportes de combate y se refiere a las mixed martial arts, Las MMA, en
+                            definitiva, incluyen movimientos y acciones de boxeo, karate, taekwondo, kickboxing, judo y
+                            lucha libre</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>/
+    <div class="container" id="formu">
+        <div class="row">
+            <form action="" id="formulario">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="ejemplo@ejemplo.cl"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="rut">Rut</label>
+                    <input type="rut" name="rut" id="rut" class="form-control" placeholder="Ingrese Rut" required>
+                </div>
+                <div class="form-group">
+                    <label for="pass1">Password</label>
+                    <input type="password" name="pass1" id="pass1" class="form-control" placeholder="********" required>
+                </div>
+                <div class="form-group">
+                    <label for="pass2">Vuelve a escribir password</label>
+                    <input type="password" name="pass2" id="pass2" class="form-control" placeholder="********" required>
+                </div>
+                <div class="form-group">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea class="form-control" id="comentarios" rows="3"
+                        placeholder="Ingrese sus comentarios"></textarea>
+                </div>
+
+                <input type="submit" value="Enviar" class="btn btn-primary" id="enviar">
+                <div class="alert alert-danger" id="error"></div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#error").hide();
+            $("#formulario").submit(function () {
+                var mensaje = "";
+                if ($("#nombre").val().trim().length == 0) {
+                    mensaje = "El nombre esta en blanco"
+                }
+                if ($("#email").val().trim().length == 0) {
+                    mensaje = "El email esta en blanco"
+                }
+
+                if ($("#pass1").val().trim().length == 0) {
+                    mensaje = "La Contraseña esta en blanco"
+                }
+                if ($("#pass2").val().trim().length == 0) {
+                    mensaje = "La Contraseña esta en blanco"
+                }
+                if($("#comentarios").val().trim().length == 0) {
+                    mensaje = "Los comentarios estan vacios"
+                }
+                if (mensaje != "") {
+                    $("#error").html(mensaje);
+                    $("#error").show();
+                    event.preventDefault();
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

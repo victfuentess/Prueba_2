@@ -1,0 +1,13 @@
+body{
+    background-color: darkslategrey;
+    color: white;
+    font-family: 'Benne', serif;
+}
+
+#cards{
+    color: black;
+}
+
+#fotos{
+    width: 3px;
+}
