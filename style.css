@@ -8,6 +8,7 @@ body{
     color: black;
 }
 
-#fotos{
-    width: 3px;
+#fotos {
+    width: 100px;
+    height: 100px;
 }
